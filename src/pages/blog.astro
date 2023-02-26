@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getAllBlogPosts } from '../decouple/collection';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const allPosts = await getCollection('posts');
+const allPosts = await getAllBlogPosts();
 const pageTitle = 'My Astro Learning Blog';
 ---
 

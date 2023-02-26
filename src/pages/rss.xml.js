@@ -1,7 +1,9 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss'
+import rss from '@astrojs/rss'
+import { getAllBlogPosts } from '../decouple/collection'
 
 export async function get() {
-  const allPosts = await getCollection('posts')
+  const posts = await getAllBlogPosts()
+
   return rss({
     title: 'Astro Learner | Blog',
     description: 'My journey learning Astro',

@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostEntry from '../../components/PostEntry.astro';
+import { getAllBlogPosts } from '../../decouple/collection';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('posts');
+  const allPosts = await getAllBlogPosts();
 
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
