@@ -4,10 +4,24 @@ import Navigation from '@/components/l3/Navigation.astro';
 import ThemeIcon from '@/components/l2/ThemeIcon.astro';
 ---
 
-<nav>
-  <Hamburger />
-  <div style="display:flex;">
+<nav class="navbar bg-base-100">
+  <div class="navbar-start md:hidden">
+    <div class="dropdown">
+      <label for="my-modal-4">
+        <Hamburger />
+      </label>
+      <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+      <label for="my-modal-4" class="modal cursor-pointer">
+        <label class="modal-box relative" for="">
+          <Navigation />
+        </label>
+      </label>
+    </div>
+  </div>
+  <div class="navbar-center hidden md:flex">
     <Navigation />
+  </div>
+  <div class="navbar-end">
     <ThemeIcon />
   </div>
 </nav>
