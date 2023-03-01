@@ -1,6 +1,6 @@
 ---
-import { getAllBlogPosts } from '../../decouple/collection';
-import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
+import { getAllBlogPosts } from '@/decouple/collection';
+import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
 
 export async function getStaticPaths() {
   const allPosts = await getAllBlogPosts();

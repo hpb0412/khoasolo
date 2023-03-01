@@ -1,6 +1,6 @@
 ---
-import { getAllBlogPosts } from '../../decouple/collection';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllBlogPosts } from '@/decouple/collection';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const allPosts = await getAllBlogPosts();
 const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
