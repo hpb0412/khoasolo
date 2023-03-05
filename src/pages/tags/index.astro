@@ -8,10 +8,10 @@ const pageTitle = 'Tag Index';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div>
+  <div class="tags">
     {
       uniqueTags.map((tag) => (
-        <p>
+        <p class="tag">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
