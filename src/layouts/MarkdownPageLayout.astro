@@ -2,12 +2,14 @@
 import DocumentLayout from '@/layouts/DocumentLayout.astro';
 import Footer from '@/components/l4/Footer.astro';
 import Header from '@/components/l4/Header.astro';
-const { pageTitle } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<DocumentLayout pageTitle={pageTitle}>
+<DocumentLayout pageTitle={frontmatter.title}>
   <Header />
-  <slot />
+  <div class="prose my-16">
+    <slot />
+  </div>
   <div class="flex-1"></div>
   <Footer />
 </DocumentLayout>
