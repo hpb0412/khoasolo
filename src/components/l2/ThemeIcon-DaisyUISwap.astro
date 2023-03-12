@@ -26,6 +26,8 @@
 </label>
 
 <script>
+  const DARK_THEME = 'mydark'
+  const LIGHT_THEME = 'mylight'
   const el = document.getElementById('theme-toggle');
 
   const theme = (() => {
@@ -33,8 +35,8 @@
       return (
         localStorage.getItem('theme') ??
         (window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light')
+          ? DARK_THEME
+          : LIGHT_THEME)
       );
     }
   })();
@@ -42,18 +44,18 @@
   document.documentElement.dataset.theme = theme;
   (el as HTMLInputElement).setAttribute(
     'checked',
-    theme === 'dark' ? 'true' : 'false'
+    theme === DARK_THEME ? 'true' : 'false'
   );
-  (el as HTMLInputElement).checked = theme === 'dark' ? true : false;
+  (el as HTMLInputElement).checked = theme === DARK_THEME ? true : false;
 
   const handleToggle = (event: InputEvent) => {
     const doc = document.documentElement;
     if ((event.currentTarget as HTMLInputElement).checked) {
-      doc.dataset.theme = 'dark';
-      window.localStorage.setItem('theme', 'dark');
+      doc.dataset.theme = DARK_THEME;
+      window.localStorage.setItem('theme', DARK_THEME);
     } else {
-      doc.dataset.theme = 'light';
-      window.localStorage.setItem('theme', 'light');
+      doc.dataset.theme = LIGHT_THEME;
+      window.localStorage.setItem('theme', LIGHT_THEME);
     }
   };
 
