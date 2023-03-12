@@ -1,0 +1,14 @@
+---
+const { tag } = Astro.props;
+---
+
+<div class="stats light:shadow dark:bg-primary">
+  <div class="stat">
+    <div class="stat-title">
+      <a class="dark:text-base-100" href={`/tags/${tag}`}>
+        {tag}
+      </a>
+    </div>
+    {/* <div class="stat-value">{randomCount()}</div> */}
+  </div>
+</div>
