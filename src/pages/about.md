@@ -3,25 +3,34 @@ layout: '@/layouts/MarkdownPageLayout.astro'
 title: About Me
 ---
 
-#### You reach here, you're curious about me. Cool...!
+#### You reach here, you're interested in me. Cool...!
 
 # Ok so... it's about me
 
-## Hmm, how can I describe my self?
+In short, **FE** *specialist*, **BE** *hobbyist*
 
-Daytime, I'm a Frontend Developer at trade.
+I prefer `Functional Programming` although I was grown up with `Object Oriented Programming` in mind
 
-At night, I tinker with other programming topics.
+<!-- I am capable of working on: -->
+<!---->
+<!-- - `NodeJS` with `ExpressJS` -->
+<!-- - `Go` with `GoFiber` -->
+<!-- - `PHP` with `Laravel` -->
 
-## What do I know?
+I am familiar with `Docker` and `Docker-Compose` using `Docker Desktop`
 
-I enjoy most of programming stuff. (of course, not all)
+I use `Supabase` for relational database `Postgres`,
+and `Mongo Atlas` for nosql
 
-I have some pet projects.
+## Where else you can see me?
 
-I know my limits but I don't limit myself.
+You will find
 
-## Where else to find me?
+- My coding style at
+<a class="link-primary" href="https://github.com/hpb0412/" target="_blank">Github</a>
 
-You can see my working profile at
-<a class="link-primary" href="https://www.linkedin.com/in/khoadodang/" target="_blank">Linkedin</a>.
+- My working profile at
+<a class="link-primary" href="https://www.linkedin.com/in/khoadodang/" target="_blank">Linkedin</a>
+
+- My contribution to community at
+<a class="link-primary" href="https://stackoverflow.com/users/3550678/khoa" target="_blank">Stack Overflow</a>
