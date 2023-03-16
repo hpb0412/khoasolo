@@ -7,15 +7,9 @@ title: About Me
 
 # Ok so... it's about me
 
-In short, **FE** *specialist*, **BE** *hobbyist*
+> In short, **FE** *specialist*, **BE** *hobbyist*
 
-I prefer `Functional Programming` although I was grown up with `Object Oriented Programming` in mind
-
-<!-- I am capable of working on: -->
-<!---->
-<!-- - `NodeJS` with `ExpressJS` -->
-<!-- - `Go` with `GoFiber` -->
-<!-- - `PHP` with `Laravel` -->
+I prefer `Functional Programming` although I was grown up with `Object Oriented Programming` in university
 
 I am familiar with `Docker` and `Docker-Compose` using `Docker Desktop`
 
