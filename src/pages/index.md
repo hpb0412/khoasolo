@@ -7,10 +7,14 @@ title: Homepage
 
 # I am Khoa Do
 
-## TL;DR 😉
+I have 10+ years of experience in application development.
 
-- Functional programming geek
-- FE specialist, BE hobbyist and others...
+My specialty is Frontend Development despite of earlier in my career, I am a desktop app developer.
+
+My favorite tech stacks are built up on `React`, `SolidJS`, `Astro`, and `TailwindCSS`.
+You can name some of them like `NextJS`, `Redux` (toolkit), `Tanstack's Query`, `DaisyUI`, etc...
+
+I am also efficient with `Vue` (both 2 and 3) and `Nuxt` 3 since they are what I am doing at work.
 
 ## Why [`KhoaSolo`](https://khoasolo.com)?
 
