@@ -7,9 +7,9 @@ title: Homepage
 
 # I am Khoa Do
 
-I have 10+ years of experience in application development.
+I have **10+** *years of experience* in application development.
 
-My specialty is Frontend Development despite of earlier in my career, I am a desktop app developer.
+My specialty is `Frontend Development` despite of earlier in my career, I am a desktop app developer.
 
 My favorite tech stacks are built up on `React`, `SolidJS`, `Astro`, and `TailwindCSS`.
 You can name some of them like `NextJS`, `Redux` (toolkit), `Tanstack's Query`, `DaisyUI`, etc...
