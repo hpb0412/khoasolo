@@ -32,5 +32,3 @@ You will find
 - My working profile at
 <a class="link-primary" href="https://www.linkedin.com/in/khoadodang/" target="_blank">Linkedin</a>
 
-- My contribution to community at
-<a class="link-primary" href="https://stackoverflow.com/users/3550678/khoa" target="_blank">Stack Overflow</a>
