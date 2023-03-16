@@ -1,6 +1,11 @@
 ---
 import Hamburger from '@/components/l2/Hamburger.astro';
 import ThemeIcon from '@/components/l2/ThemeIcon-DaisyUISwap.astro';
+
+// https://www.cyishere.dev/blog/astro-active-nav-item
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+console.log(currentPath);
 ---
 
 <nav class="navbar p-0">
@@ -14,11 +19,27 @@ import ThemeIcon from '@/components/l2/ThemeIcon-DaisyUISwap.astro';
       <div class="modal-box relative">
         <label
           for="my-modal-4"
-          class="btn btn-sm btn-circle absolute right-2 top-2">✕</label
+          class="btn btn-sm btn-circle absolute right-3 top-2">✕</label
         >
-        <ul class="menu">
-          <li><a class="justify-center uppercase font-bold" href="/">Home</a></li>
-          <li><a class="justify-center uppercase font-bold" href="/about/">About</a></li>
+        <ul class="menu pt-8">
+          <li>
+            <a
+              class:list={[
+                'justify-center uppercase font-bold',
+                currentPath === '' ? 'active' : '',
+              ]}
+              href="/">Home</a
+            >
+          </li>
+          <li>
+            <a
+              class:list={[
+                'justify-center uppercase font-bold',
+                currentPath === 'about' ? 'active' : '',
+              ]}
+              href="/about">About</a
+            >
+          </li>
           <!-- <li><a class="justify-center uppercase font-bold" href="/blog">Blog</a></li> -->
           <!-- <li><a class="justify-center uppercase font-bold" href="/tags">Tags</a></li> -->
         </ul>
@@ -33,8 +54,24 @@ import ThemeIcon from '@/components/l2/ThemeIcon-DaisyUISwap.astro';
   <!-- Horizontal menu on desktop -->
   <div class="navbar-center hidden md:flex">
     <ul class="menu menu-horizontal">
-      <li><a class="uppercase font-bold" href="/">Home</a></li>
-      <li><a class="uppercase font-bold" href="/about">About</a></li>
+      <li>
+        <a
+          class:list={[
+            'uppercase font-bold',
+            currentPath === '' ? 'active' : '',
+          ]}
+          href="/">Home</a
+        >
+      </li>
+      <li>
+        <a
+          class:list={[
+            'uppercase font-bold',
+            currentPath === 'about' ? 'active' : '',
+          ]}
+          href="/about">About</a
+        >
+      </li>
       <!-- <li><a class="uppercase font-bold" href="/blog">Blog</a></li> -->
       <!-- <li><a class="uppercase font-bold" href="/tags">Tags</a></li> -->
     </ul>
