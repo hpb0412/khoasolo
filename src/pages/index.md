@@ -8,7 +8,7 @@ description: Looking for help with your Frontend Development? Khoa Do has 10+ ye
 
 # I am Khoa Do
 
-I have **10+** *years of experience* in application development.
+I have **10+** _years of experience_ in application development.
 
 My specialty is `Frontend Development` despite of earlier in my career, I am a desktop app developer.
 
@@ -19,7 +19,7 @@ I am also efficient with `Vue` (both 2 and 3) and `Nuxt` 3 since they are what I
 
 ## Why [`KhoaSolo`](https://khoasolo.com)?
 
-- There is no available <a>`khoado[dot]com`</a>
+- There is no available <span class="underline">`khoado[dot]com`</span>
 - It sounds awesome like **`Han Solo`** from **`Star Wars`**
 
 ## What else?
