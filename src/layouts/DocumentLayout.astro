@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-const { pageTitle } = Astro.props;
+const { pageTitle, pageDesc } = Astro.props;
 ---
 
 <html lang="en">
@@ -12,6 +12,7 @@ const { pageTitle } = Astro.props;
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDesc} />
     <title>{pageTitle}</title>
   </head>
   <body class="flex flex-col min-h-screen">

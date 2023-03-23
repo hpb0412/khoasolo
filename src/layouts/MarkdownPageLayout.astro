@@ -5,7 +5,10 @@ import Header from '@/components/l4/Header.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<DocumentLayout pageTitle={frontmatter.title}>
+<DocumentLayout
+  pageTitle={frontmatter.title}
+  pageDesc={frontmatter.description}
+>
   <Header />
   <div class="prose my-16">
     <slot />

@@ -1,6 +1,7 @@
 ---
 layout: '@/layouts/MarkdownPageLayout.astro'
-title: About Me
+title: About Khoa Do
+description: Looking for a tech pro with expertise in Frontend and a passion for Backend? Khoa Do who prefers Functional Programming and has experience with Docker, Supabase, and Mongo Atlas. Explore his Github and Linkedin profiles.
 ---
 
 #### You reach here, you're interested in me. Cool...!
