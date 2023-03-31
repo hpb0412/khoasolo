@@ -2,10 +2,10 @@
 import DocumentLayout from '@/layouts/DocumentLayout.astro';
 import Footer from '@/components/l4/Footer.astro';
 import Header from '@/components/l4/Header.astro';
-const { pageTitle } = Astro.props;
+const { pageTitle, pageDesc } = Astro.props;
 ---
 
-<DocumentLayout pageTitle={pageTitle}>
+<DocumentLayout pageTitle={pageTitle} pageDesc={pageDesc}>
   <Header />
   <slot />
   <div class="flex-1"></div>

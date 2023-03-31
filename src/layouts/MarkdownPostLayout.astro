@@ -4,7 +4,7 @@ import Tag from '@/components/l2/Tag.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} pageDesc={frontmatter.description}>
   <!-- <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p> -->
   <article class="prose my-12">
     <p><em>{frontmatter.description}</em></p>
