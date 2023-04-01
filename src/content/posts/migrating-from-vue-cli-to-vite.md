@@ -217,6 +217,17 @@ With that in mind, I thought:
 
 It turns out that's a good idea. Moving to Vite, I am free and happy.
 
+## Result
+
+Let me wrap the post with a slice of comparison on production environment:
+- Vite: `yarn build --mode production`
+- Vue CLI: `vue-cli-service build --mode production`
+
+<figure>
+    <img src="https://ik.imagekit.io/hpb/tr:w-1200/vue-cli-to-vite-result.jpg?updatedAt=1680323850639" alt="Comparison Result" />
+    <figcaption align="center">Vite above and old Vue CLI below</figcaption>
+</figure>
+
 ## Final words
 
 Phew! It's a long post!
