@@ -11,16 +11,12 @@ const { frontmatter } = Astro.props;
     <!-- <p>Written by {frontmatter.author}</p> -->
     {
       frontmatter.image.url ? (
-        <img
-          src={frontmatter.image.url}
-          width="300"
-          alt={frontmatter.image.alt}
-        />
+        <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
       ) : null
     }
-    <div class="flex flex-wrap gap-2 my-8">
-      {frontmatter.tags.map((tag) => <Tag tag={tag} />)}
-    </div>
+    <!-- <div class="flex flex-wrap gap-2 my-8"> -->
+    <!--   {frontmatter.tags.map((tag) => <Tag tag={tag} />)} -->
+    <!-- </div> -->
     <slot />
   </article>
 </BaseLayout>

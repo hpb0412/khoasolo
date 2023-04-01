@@ -3,9 +3,9 @@ title: 'Migrating from Vue CLI to Vite'
 pubDate: 2023-93-31
 description: 'Migrate your legacy Vue 2 project from Vue CLI to Vite with ease. Learn from my experience and tips for a smooth transition.'
 image:
-  url: ''
-  alt: ''
-tags: []
+  url: 'https://ik.imagekit.io/hpb/tr:w-1200/vue-cli-to-vite-cover.jpg?updatedAt=1680321784966'
+  alt: 'Vue CLI to Vite Cover Picture'
+tags: ['vue', 'cli', 'migration']
 ---
 
 # Migrating from Vue CLI to Vite
@@ -195,7 +195,7 @@ One day, an official announcement has become:
 And we have a notice:
 
 <figure>
-    <img src="https://ik.imagekit.io/hpb/vue-cli-maintenance-mode.jpg?updatedAt=1680314542890" alt="Vue CLI Notice" />
+    <img src="https://ik.imagekit.io/hpb/tr:w-600/vue-cli-maintenance-mode.jpg?updatedAt=1680314542890" alt="Vue CLI Notice" />
     <figcaption align="center">(screenshot from Vue CLI's official <a href="https://cli.vuejs.org/">website</a>)</figcaption>
 </figure>
 
