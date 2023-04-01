@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-const { pageTitle, pageDesc } = Astro.props;
+const { pageTitle, pageDesc, image = '' } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
@@ -12,9 +12,29 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageDesc} />
     <meta name="description" content={pageDesc} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDesc} />
+    <meta property="twitter:image" content={image} />
+
     <title>{pageTitle}</title>
   </head>
   <body class="flex flex-col min-h-screen">
