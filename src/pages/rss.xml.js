@@ -5,9 +5,9 @@ export async function get() {
   const posts = await getAllBlogPosts()
 
   return rss({
-    title: 'Astro Learner | Blog',
-    description: 'My journey learning Astro',
-    site: 'https://my-blog-site.netlify.app',
+    title: 'Khoa Solo | Blog',
+    description: 'Khoa\'s corner on Internet',
+    site: import.meta.env.SITE,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
