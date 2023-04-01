@@ -2,7 +2,6 @@
 title: 'Migrating from Vue CLI to Vite'
 pubDate: 2023-93-31
 description: 'Migrate your legacy Vue 2 project from Vue CLI to Vite with ease. Learn from my experience and tips for a smooth transition.'
-author: 'Khoa Do'
 image:
   url: ''
   alt: ''

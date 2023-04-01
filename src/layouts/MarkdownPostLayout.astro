@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
   <!-- <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p> -->
   <article class="prose my-12">
     <p><em>{frontmatter.description}</em></p>
-    <p>Written by {frontmatter.author}</p>
+    <!-- <p>Written by {frontmatter.author}</p> -->
     {
       frontmatter.image.url ? (
         <img
