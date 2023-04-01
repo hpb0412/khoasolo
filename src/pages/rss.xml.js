@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss'
-import { getAllBlogPosts } from '../decouple/collection'
+import { getAllBlogPosts } from '@/content'
 
 export async function get() {
   const posts = await getAllBlogPosts()
