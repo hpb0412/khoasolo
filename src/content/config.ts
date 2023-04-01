@@ -11,6 +11,8 @@ const postCollection = defineCollection({
       .object({
         url: z.string(),
         alt: z.string(),
+        w: z.number(),
+        h: z.number(),
       })
       .optional(),
   }),

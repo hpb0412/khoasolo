@@ -5,6 +5,8 @@ description: 'Migrate your legacy Vue 2 project from Vue CLI to Vite with ease. 
 image:
   url: 'https://ik.imagekit.io/hpb/tr:w-1200/vue-cli-to-vite-cover.jpg?updatedAt=1680321784966'
   alt: 'Vue CLI to Vite Cover Picture'
+  w: 1200
+  h: 657
 tags: ['vue', 'cli', 'migration']
 ---
 
@@ -220,6 +222,7 @@ It turns out that's a good idea. Moving to Vite, I am free and happy.
 ## Result
 
 Let me wrap the post with a slice of comparison on production environment:
+
 - Vite: `yarn build --mode production`
 - Vue CLI: `vue-cli-service build --mode production`
 
