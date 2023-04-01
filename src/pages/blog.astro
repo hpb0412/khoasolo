@@ -4,13 +4,13 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const allPosts = await getAllBlogPosts();
 const pageTitle = "Khoa Do's Blog";
-const pageDesc = "Khoa Do's Blog Post List";
+const pageDesc = "Khoa Do's Post List. You will find a couple of useful topics, mostly in tech.";
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDesc={pageDesc}>
   <div class="prose my-12">
     <h4>👨‍💻 You will find useful technical topics here!</h4>
-    <h1>Writings</h1>
+    <h1>Blog Entries</h1>
     <ul>
       {
       allPosts.map((post) => (
