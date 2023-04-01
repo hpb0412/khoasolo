@@ -44,25 +44,29 @@ In Vite, importing Vue components requires an explicit `.vue` extension.
 - You _CANNOT_ do `import Button from '@/components/button'`.
 - You _SHOULD_ do `import Button from '@/components/button.vue'`.
 
-### 3. Alias of `src` dir
+### 3. Alias of `src`
 
-Vite makes your single alias config available to all supported features.
-
-In my case:
+In my case, the legacy code has:
 
 - `<script>` tag and the JS files used `@` as an alias for `src` directory.
 - `<style>` tag used `~` instead. (It could be because of any reason from former developers.)
 
-Anyway, I have two options. One is unifying these aliases, and else is adding another.
+Vite makes your single alias config available to all supported features.
+
+I have two options:
+
+- 1st: unifying these aliases
+- 2nd: adding another alias config
+
 I chose the first one - unifying them with `@`.
 
-### 4. Replace `process.env` with `import.meta.env`
+### 4. No `process.env`
 
-The simplest solution is to find all instances of `process.env` and replace them with `import.meta.env` ones.
+Solution is to find all instances of `process.env` and replace them with `import.meta.env` ones.
 
 I can make a more fine-grain solution, but I don't think it is neccessary.
 
-### 5. Replace `require.context` w/ `import.meta.glob` or `import.meta.globEager`
+### 5. No `require.context`
 
 I believe most of mid-size and above level projects have this:
 
@@ -73,9 +77,11 @@ const requireAll = (reqCtx) => requires.keys().map(reqCtx)
 requireAll(req)
 ```
 
-This code means load all svg files in svg directory and its sub dirs.
+This code means load all `.svg` files in the svg directory and its sub dirs.
 
 If you throw a new svg into this folder, it will be automatically available to the system.
+
+> Cool, isn't it???
 
 Well...!!! Vite doesn't have `require.context`.
 
@@ -95,18 +101,18 @@ Use them wisely!
 
 Config Jest is a bit tedious. Jest used CommonJS and doesn't have an offical support for ESM. That's why it is a bit counter intuitive.
 
-Anyway, I can switch to `Vitest`, but this will expand the scope of my task.
-So I decided to fight one for all - continue to use `Jest` test.
+I can switch to `Vitest`, but this will expand the scope of my task.
+So I decided to continue with `Jest` test.
 
 Here is the checklist to bypass the tedious jessy 😈 :
 
-- [x] You must have `@vue/test-utils` to test Vue components.
+- [x] You need `@vue/test-utils` to test Vue components.
 - [x] You need `vue-jest` to load Vue into Jest,
       but be careful with the [version matching](https://github.com/vuejs/vue-jest#user-content-installation).
       In my case my `vue-jest` is `@vue/vue2-jest`
 - [x] You need `babel-jest` even though your Vite doesn't.
       (It is used to load your ESM tests into Jest's CommonJS code)
-- [x] You _absolutely_ need `@babel`'s ecosystem to aid your `babel-jest`.
+- [x] You _absolutely_ need `@babel/core` to aid your `babel-jest`.
 - [x] You absolutely need `babel-plugin-transform-vite-meta-env` for `import.meta.env`. It is the only tool I found works out of the box.
 
 ```json
@@ -133,7 +139,9 @@ Here is the checklist to bypass the tedious jessy 😈 :
   },
   {
     globals: {
-      'vue-jest': { babelConfig: true }
+      'vue-jest': { // this one still be 'vue-jest', not the package name
+        babelConfig: true
+      }
     }
   }
 }
@@ -152,6 +160,7 @@ module.exports = {
 The only notice is setting the `sourceType` of `parserOptions` to `'module'`.
 
 ```javascript
+// .eslintrc.js
 module.exports = {
   // ...
   parserOptions: {
@@ -174,28 +183,30 @@ I decided to use `yorkie`. This save me from renewing the configuration, which w
 
 In the early days of Vue 3, people still used Vue CLI toolset.
 
-Later, Vite came into place, and Vue CLI faded into history.
-
-Then one day, an official announcement has become.
-
-It sounds like:
-
-> Vue CLI will go to maintenance mode. Vite will be in charge.
-
-([Read more](https://blog.vuejs.org/posts/vue-3-as-the-new-default))
-
-And from that day, I haven't seen any updates for the plugins of Vue CLI anymore.
+One day, an official announcement has become:
 
 <figure>
-    <img src="/assets/vue-cli-go-to-maintenance-mode.png" alt="Vue CLI Notice" />
-    <figcaption align="center">(screenshot from Vue's official website)</figcaption>
+    <blockquote cite="https://blog.vuejs.org/posts/vue-3-as-the-new-default">
+        The New Vue</br>
+        Blazing fast, Vite-powered build toolchain
+    </blockquote>
+    <figcaption>-- Evan You, <cite>Vue 3 as the new default</cite></figcaption>
 </figure>
 
-The approaches from these two tools are vastly different.
+And we have a notice:
+
+<figure>
+    <img src="https://ik.imagekit.io/hpb/vue-cli-maintenance-mode.jpg?updatedAt=1680314542890" alt="Vue CLI Notice" />
+    <figcaption align="center">(screenshot from Vue CLI's official <a href="https://cli.vuejs.org/">website</a>)</figcaption>
+</figure>
+
+Now we have two guys on a field.
+
+The approaches from these two are vastly different.
 
 With Vue CLI, every integration requires a plugin. You rely on the plugin providers for everything. If you need an upgraded version of the tools/libs in your system, you would wish it was available at the plugin's repo.
 
-If not, you can do it manually, but the cost is high-time consuming for manual integration and the later maintenance effort.
+You can do it manually, but it is awful, and high-time consuming.
 
 > That is why our plan to jump to Vue 3 from Vue 2 had so many barriers. I depend on two different parties to get what I want.
 

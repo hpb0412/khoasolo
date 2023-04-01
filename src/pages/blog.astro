@@ -3,18 +3,22 @@ import { getAllBlogPosts } from '@/decouple/collection';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const allPosts = await getAllBlogPosts();
-const pageTitle = 'My Astro Learning Blog';
+const pageTitle = "Khoa Do's Blog";
+const pageDesc = "Khoa Do's Blog Post List";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {
+<BaseLayout pageTitle={pageTitle} pageDesc={pageDesc}>
+  <div class="prose my-12">
+    <h4>👨‍💻 You will find useful technical topics here!</h4>
+    <h1>Writings</h1>
+    <ul>
+      {
       allPosts.map((post) => (
         <li>
           <a href={`/posts/${post.slug}`}>{post.data.title}</a>
         </li>
       ))
-    }
-  </ul>
+      }
+    </ul>
+  </div>
 </BaseLayout>
