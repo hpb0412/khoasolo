@@ -1,5 +1,5 @@
 ---
-layout: '@/layouts/MarkdownPageLayout.astro'
+layout: '@/layouts/PageLayoutMarkdown.astro'
 title: Khoa Do's Homepage
 description: Looking for help with your Frontend Development? Khoa Do has 10+ years of experience and specializes in React, Next, Astro, TailwindCSS, Vue, and Nuxt 3.
 ---
