@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
 const pageTitle = 'About Me';
 const identity = {
   firstName: 'Sarah',
@@ -18,7 +18,7 @@ const fontWeight = 'semibold';
 const textCase = 'uppercase';
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
 Daytime, I'm a Frontend Developer at trade.
 
 At night, I tinker with other programming topics.
@@ -64,4 +64,4 @@ At night, I tinker with other programming topics.
       <p>My goal is not 3 days.</p>
     )
   }
-</BaseLayout>
+</PageLayout>

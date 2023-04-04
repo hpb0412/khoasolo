@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
 import PostEntry from '@/components/PostEntry.astro';
 import { getAllBlogPosts } from '@/content';
 
@@ -26,7 +26,7 @@ const { posts } = Astro.props;
 const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
 ---
 
-<BaseLayout pageTitle={tag}>
+<PageLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <ul>
     {
@@ -35,4 +35,4 @@ const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
       ))
     }
   </ul>
-</BaseLayout>
+</PageLayout>

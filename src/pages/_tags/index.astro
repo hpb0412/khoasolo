@@ -1,6 +1,6 @@
 ---
 import { getAllBlogPosts } from '@/content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
 import Tag from '@/components/Tag.astro';
 
 const allPosts = await getAllBlogPosts();
@@ -12,8 +12,8 @@ function randomCount() {
 }
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
   <div class="flex flex-wrap gap-6 mt-16">
     {uniqueTags.map((tag) => <Tag tag={tag} />)}
   </div>
-</BaseLayout>
+</PageLayout>

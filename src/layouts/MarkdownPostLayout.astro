@@ -1,10 +1,10 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import PageLayout from './PageLayout.astro';
 import Tag from '@/components/Tag.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout
+<PageLayout
   pageTitle={frontmatter.title}
   pageDesc={frontmatter.description}
   image={frontmatter.image}
@@ -23,4 +23,4 @@ const { frontmatter } = Astro.props;
     <!-- </div> -->
     <slot />
   </article>
-</BaseLayout>
+</PageLayout>

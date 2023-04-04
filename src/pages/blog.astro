@@ -1,13 +1,13 @@
 ---
 import { getAllBlogPosts } from '@/content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
 
 const allPosts = await getAllBlogPosts();
 const pageTitle = "Khoa Do's Blog";
 const pageDesc = "Khoa Do's Post List. You will find a couple of useful topics, mostly in tech.";
 ---
 
-<BaseLayout pageTitle={pageTitle} pageDesc={pageDesc}>
+<PageLayout pageTitle={pageTitle} pageDesc={pageDesc}>
   <div class="prose my-12">
     <h4>👨‍💻 You will find useful technical topics here!</h4>
     <h1>Blog Entries</h1>
@@ -21,4 +21,4 @@ const pageDesc = "Khoa Do's Post List. You will find a couple of useful topics, 
       }
     </ul>
   </div>
-</BaseLayout>
+</PageLayout>
