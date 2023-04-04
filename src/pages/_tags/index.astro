@@ -1,7 +1,7 @@
 ---
 import { getAllBlogPosts } from '@/content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Tag from '@/components/l2/Tag.astro';
+import Tag from '@/components/Tag.astro';
 
 const allPosts = await getAllBlogPosts();
 const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
