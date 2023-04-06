@@ -2,6 +2,11 @@
 layout: '@/layouts/PageLayoutMarkdown.astro'
 title: Khoa Do - Frontend and Backend
 description: Khoa Do is expertise in Frontend Development and has a passion for Backend stuff. He loves Functional Programming. Let's check out his Github and Linkedin profiles.
+image:
+  url: 'https://ik.imagekit.io/hpb/tr:w-1200/khoasolo-cover.jpg?updatedAt=1680789804228'
+  alt: 'khoasolo cover image'
+  w: 1200
+  h: 628
 ---
 
 #### You reach here, you're interested in me. 🥳 Cool...!

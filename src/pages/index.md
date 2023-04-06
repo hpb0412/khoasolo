@@ -2,6 +2,11 @@
 layout: '@/layouts/PageLayoutMarkdown.astro'
 title: Khoa Do - Frontend Developer
 description: Looking for Frontend Developer? Khoa Do has 10+ years of experience and specializes in React, Next, Astro, TailwindCSS, Vue, and Nuxt 3.
+image:
+  url: 'https://ik.imagekit.io/hpb/tr:w-1200/khoasolo-cover.jpg?updatedAt=1680789804228'
+  alt: 'khoasolo cover image'
+  w: 1200
+  h: 628
 ---
 
 #### 👋 Welcome to my corner

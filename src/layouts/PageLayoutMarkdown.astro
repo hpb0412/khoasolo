@@ -8,6 +8,7 @@ const { frontmatter } = Astro.props;
 <DocumentLayout
   pageTitle={frontmatter.title}
   pageDesc={frontmatter.description}
+  image={frontmatter.image}
 >
   <Header />
   <div class="prose my-16">
