@@ -14,7 +14,7 @@
     "@astrojs/sitemap": "^1.2.1",
     "@astrojs/tailwind": "^3.0.1",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.0.14",
+    "astro": "^2.2.0",
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.51.2",
     "sass": "^1.58.3",
