@@ -19,4 +19,7 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  experimental: {
+    assets: true,
+  },
 })
