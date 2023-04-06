@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/PageLayoutMarkdown.astro'
-title: Khoa Do's Homepage
-description: Looking for help with your Frontend Development? Khoa Do has 10+ years of experience and specializes in React, Next, Astro, TailwindCSS, Vue, and Nuxt 3.
+title: Khoa Do - Frontend Developer
+description: Looking for Frontend Developer? Khoa Do has 10+ years of experience and specializes in React, Next, Astro, TailwindCSS, Vue, and Nuxt 3.
 ---
 
 #### 👋 Welcome to my corner
