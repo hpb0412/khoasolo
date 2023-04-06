@@ -2,12 +2,17 @@
 import '@/styles/global.css';
 const { pageTitle, pageDesc, image = {} } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+import appleTouchIcon from '@/assets/favicon/apple-touch-icon.png';
+import icon32 from '@/assets/favicon/favicon-32x32.png';
+import icon16 from '@/assets/favicon/favicon-16x16.png';
+/* import manifest from '@/assets/favicon/site.webmanifest'; */
+import maskIcon from '@/assets/favicon/safari-pinned-tab.svg';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
@@ -15,6 +20,14 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="generator" content={Astro.generator} />
 
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
+    <link rel="icon" type="image/png" sizes="32x32" href={icon32.src} />
+    <link rel="icon" type="image/png" sizes="16x16" href={icon16.src} />
+    <link rel="mask-icon" href={maskIcon.src} color="#243b55" />
+    <meta name="msapplication-TileColor" content="#243b55" />
+    <meta name="theme-color" content="#243b55" />
 
     <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
