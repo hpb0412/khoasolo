@@ -4,20 +4,21 @@ import PageLayout from '@/layouts/PageLayout.astro';
 
 const allPosts = await getAllBlogPosts();
 const pageTitle = "Khoa Do's Blog";
-const pageDesc = "Khoa Do's Post List. You will find a couple of useful topics, mostly in tech.";
+const pageDesc =
+  'At this blog, you will find a couple of useful articles, written by Khoa Do, mostly in tech.';
 ---
 
 <PageLayout pageTitle={pageTitle} pageDesc={pageDesc}>
   <div class="prose my-12">
-    <h4>👨‍💻 You will find useful technical topics here!</h4>
-    <h1>Blog Entries</h1>
+    <h4>You will find useful technical topics here! 👨‍💻</h4>
+    <h1>💻 All Articles</h1>
     <ul>
       {
-      allPosts.map((post) => (
-        <li>
-          <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-        </li>
-      ))
+        allPosts.map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+          </li>
+        ))
       }
     </ul>
   </div>
