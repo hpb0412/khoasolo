@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 import sitemap from '@astrojs/sitemap'
+import robotsTxt from 'astro-robots-txt'
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +19,9 @@ export default defineConfig({
       },
     }),
     sitemap(),
+    robotsTxt({
+      host: true,
+    }),
   ],
   experimental: {
     assets: true,
