@@ -34,18 +34,18 @@ const currentPath = pathname.slice(1); // remove the first "/"
             <a
               class:list={[
                 'justify-center uppercase font-bold',
-                currentPath === 'about' ? 'active' : '',
+                currentPath === 'about/' ? 'active' : '',
               ]}
-              href="/about">About</a
+              href="/about/">About</a
             >
           </li>
           <li>
             <a
               class:list={[
                 'justify-center uppercase font-bold',
-                currentPath === 'blog' ? 'active' : '',
+                currentPath === 'blog/' ? 'active' : '',
               ]}
-              href="/blog">Blog</a
+              href="/blog/">Blog</a
             >
           </li>
           <!-- <li><a class="justify-center uppercase font-bold" href="/tags">Tags</a></li> -->
@@ -74,18 +74,18 @@ const currentPath = pathname.slice(1); // remove the first "/"
         <a
           class:list={[
             'uppercase font-bold',
-            currentPath === 'about' ? 'active' : '',
+            currentPath === 'about/' ? 'active' : '',
           ]}
-          href="/about">About</a
+          href="/about/">About</a
         >
       </li>
       <li>
         <a
           class:list={[
             'uppercase font-bold',
-            currentPath === 'blog' ? 'active' : '',
+            currentPath === 'blog/' ? 'active' : '',
           ]}
-          href="/blog">Blog</a>
+          href="/blog/">Blog</a>
       </li>
       <!-- <li><a class="uppercase font-bold" href="/tags">Tags</a></li> -->
     </ul>
