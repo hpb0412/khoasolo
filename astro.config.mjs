@@ -3,8 +3,6 @@ import lastmod from './lastmod.json'
 
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind'
-
-// https://astro.build/config
 import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
 
@@ -15,7 +13,6 @@ export default defineConfig({
   site: DOMAIN,
   /* trailingSlash: 'never', */
   integrations: [
-    // https://docs.astro.build/en/guides/integrations-guide/tailwind/
     tailwind({
       config: {
         applyBaseStyles: false,
@@ -39,7 +36,5 @@ export default defineConfig({
       host: true,
     }),
   ],
-  experimental: {
-    assets: true,
-  },
+  experimental: {},
 })
