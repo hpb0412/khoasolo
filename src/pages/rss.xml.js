@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss'
-import { getAllBlogPosts } from '@/content'
+import { getAllBlogPosts } from '@/data/content'
 
 export async function get() {
   const posts = await getAllBlogPosts()

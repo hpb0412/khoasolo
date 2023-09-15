@@ -1,7 +1,7 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
 import PostEntry from '@/components/PostEntry.astro';
-import { getAllBlogPosts } from '@/content';
+import { getAllBlogPosts } from '@/data/content';
 
 export async function getStaticPaths() {
   const allPosts = await getAllBlogPosts();
