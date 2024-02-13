@@ -19,8 +19,8 @@ I prefer `Functional Programming` although I was grown up with `Object Oriented 
 
 I am familiar with `Docker` and `Docker-Compose` using `Docker Desktop`.
 
-I use `Supabase` for relational database `Postgres`,
-and `Mongo Atlas` for nosql.
+I use `Supabase` for `Postgres`, `PlanetScale` for `MySQL`,
+and `Mongo Atlas` for `NoSQL`.
 
 I don't call myself `Fullstack`, but I'll do __everything__ to bring my product _online_.
 
