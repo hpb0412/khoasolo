@@ -5,6 +5,7 @@ import lastmod from './lastmod.json'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
+import react from '@astrojs/react'
 
 const DOMAIN = 'https://khoasolo.com'
 
@@ -35,6 +36,7 @@ export default defineConfig({
     robotsTxt({
       host: true,
     }),
+    react(),
   ],
   experimental: {},
 })
