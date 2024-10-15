@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-const { pageTitle, pageDesc, image = {} } = Astro.props;
+const { title, desc, image = {} } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 import appleTouchIcon from '@/assets/favicon/apple-touch-icon.png';
@@ -30,15 +30,15 @@ import maskIcon from '@/assets/favicon/safari-pinned-tab.svg';
     <meta name="theme-color" content="#243b55" />
 
     <!-- Primary Meta Tags -->
-    <title>{pageTitle}</title>
-    <meta name="title" content={pageDesc} />
-    <meta name="description" content={pageDesc} />
+    <title>{title}</title>
+    <meta name="title" content={desc} />
+    <meta name="description" content={desc} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDesc} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
     <meta property="og:site_name" content={import.meta.env.site} />
     <meta property="og:locale" content="en" />
 
@@ -51,8 +51,8 @@ import maskIcon from '@/assets/favicon/safari-pinned-tab.svg';
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalUrl} />
-    <meta property="twitter:title" content={pageTitle} />
-    <meta property="twitter:description" content={pageDesc} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={desc} />
     <meta property="twitter:image" content={image} />
 
     <!-- extra metadata for Slack unfurls -->
@@ -60,7 +60,7 @@ import maskIcon from '@/assets/favicon/safari-pinned-tab.svg';
     <meta name="twitter:data1" content="Khoa Do" />
     <!-- <meta name="twitter:label2" content="Reading time" /> -->
     <!-- <meta name="twitter:data2" content="3 minutes" /> -->
-    <title>{pageTitle}</title>
+    <title>{title}</title>
   </head>
   <body class="flex flex-col min-h-screen">
     <slot />

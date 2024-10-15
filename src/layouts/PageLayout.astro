@@ -5,7 +5,7 @@ import Header from '@/components/Header.astro';
 const { pageTitle, pageDesc, image } = Astro.props;
 ---
 
-<Document pageTitle={pageTitle} pageDesc={pageDesc} image={image}>
+<Document title={pageTitle} desc={pageDesc} image={image}>
   <Header />
   <slot />
   <div class="flex-1"></div>
